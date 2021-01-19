@@ -34,44 +34,83 @@ If you have changed your SSH port number, you need to add this new port on the T
 Also I suggest to configure the values to below for a basic security and stability
 
 -Change security warning restrict_syslog to 3
+
 -Restrict syslog/rsyslog access to
+
 -SMTP_BLOCK = 0 to 1
+
 -LF_SCRIPT_ALERt =0 to 1
+
 -SYSLOG_CHECK = set to 300
+
 -PT_ALL_USERS = set to 1
+
 -Local-infile=0 in mysql configuration file.
+
 -Change ssh port number to 1313
+
 -Disable PasswordAuthentication
+
 -Enable shell Fork Bomb Protection Whm-security-Shell Fork Bomb-enable
+
 -Enable each item in the WHM > Background Process Killer
+
 -Create the file /root/.forward, and add email address in it
+
 -WHM-Edit System Mail Preferences-Forward mail for “root” to:email address
+
 -Set apache TraceEnable = off and rebuilded configuration
+
 -Change WHM - Apache Configuration - Global Configuration - ServerTokens - ProductOnly in apache configuration
+
 -Change WHM - Apache Configuration - Global Configuration - FileETag - None in apache configuration
+
 -Change WHM - Security Center - mod_userdir Tweak in apache configuration
+
 -Change php version to latest version for more security
+
 easyapache-nextstep-php version selection-save and build
+
 -Modify /usr/local/lib/php.ini and set:
+
 enable_dl = Off
+
 -Disable abused php functions in php configuration file
+
 -Enable php open_basedir Tweak
+
 -WHM - Security Center - php open_basedir Tweak
+
 -Redirected to ssl
+
 -WHM > Tweak Settings > Always redirect users to the ssl/tls ports when visiting /cpanel, /webmail.
+
 -Disable WHM - Tweak Settings - BoxTrapper Spam Trap
+
 -Set value for WHM - Tweak Settings -the maximum mail can send out per hour by domains= 20
+
 -Disable compilers WHM - Security Center - Compilers Tweak
+
 -WHM - FTP Server Configuration - Allow Logins with Root Password - No
+
 -WHM - Tweak Settings - Allow Creation of Parked/Addon Domains that resolve to other servers
+
 -Disable WHM - Tweak Settings - Allow users to Park/Addon Domains on top of domains owned by other users
+
 -Disable WHM - Tweak Settings - Proxy subdomains.
+
 -WHM - Tweak Settings - Accounts that can access a cPanel user account set to user only
+
 -Enable WHM - Tweak Settings - Blank referrer safety check
+
 -Enable WHM - Tweak Settings - Referrer safety check
+
 -Enable WHM - Tweak Settings - Hide login password from cgi scripts
+
 -Disable WHM - Security Center - SMTP Restrictions and use the csf configuration option SMTP_BLOCK instead
+
 -Stop and disable portreserve
+
 Change the following parameters for Basic DoS/DDoS Mitigation
 
 Block every IP with excessive connections [CT_LIMIT = “5”]
