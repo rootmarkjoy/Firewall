@@ -75,9 +75,13 @@ enable_dl = Off
 Change the following parameters for Basic DoS/DDoS Mitigation
 
 Block every IP with excessive connections [CT_LIMIT = “5”]
+
 Block those IPs permanently [CT_PERMANENT = “1”]
+
 Set the IP time limit to 1800 secs [CT_BLOCK_TIME = “1800”]
+
 Set connection tracking interval to 60 secs [CT_INTERVAL = “60”]
+
 So after making this changes you will get a score according to the security you have done in csf like below.
 
 Your Score: 115/141* , the values may get vary in coming updates of CSF.
